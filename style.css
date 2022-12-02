@@ -3,47 +3,22 @@ body {
     font-size: 16px;
     margin: 0 0;
     overflow: auto;
-    min-width: 1000px;
 }
 
-button {
-    padding: 20px;
-    font-size: small;
-    background-color: #e02b57;
-}
-
-button:hover, .dropdown:hover .dropbtn {
-    background-color: #C7123E;
-    color: white;
-}
-
-button:active {
-    background-color: #9C082C;
-}
-
-
-ul {
-    padding-left: 0;
-    padding-top: 30px;
-}
-
-li {
-    list-style: none;
-    padding: 0;
-    flex-shrink: 1;
-}
+/*
+Barra de navegação
+*/
 
 nav {
     height: 4rem;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
+    flex-grow: 1;
     background-color: #c4c4c4;
     position: fixed;
     width: 100%;
-    min-width: 1000px;
+    z-index: 2;
 }
-
 nav a {
     min-height: 10px;
     background-color: #c4c4c4;
@@ -87,62 +62,14 @@ button {
     cursor: pointer;
 }
 
-.banner {
-    height: 500px;
-    background-color: pink;
-    max-width: 100%;
-    padding-top: 5%;
-    padding-left: 25.5%;
-
+.nav-logo {
+    width: 8rem;
+    align-self: center;
 }
 
-.banner h1 {
-    font-size: 50px;
-}
-
-.card1 {
-    column-gap: 7%;
-    margin-bottom: 5%;
-}
-
-.card2 {
-    column-gap: 7%;
-    text-align: right;
-}
-
-.card2 .destaques-texto button {
-    align-self: flex-end;
-}
-
-.destaques {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 100%;
-}
-
-.destaques hr {
-    color: pink;
-    width: 100%;
-}
-
-.destaques-texto {
-    margin-top: 0;
-    display: inherit;
-    flex-direction: column;
-    gap: 2rem;
-    width: 25rem;
-}
-
-.destaques-texto button {
-    width: 30%;
-}
-
-.destaques-texto h2 {
-    font-size: 40px;
-    margin-top: 0;
-}
+/*
+Menu com dropdown
+*/
 
 .dropbtn {
     display: inline-block;
@@ -181,6 +108,102 @@ li.dropdown {
     display: block;
 }
 
+/*
+Botões da página
+*/
+
+button {
+    padding: 20px;
+    font-size: small;
+    background-color: #e02b57;
+}
+
+button:hover, .dropdown:hover .dropbtn {
+    background-color: #C7123E;
+    color: white;
+}
+
+button:active {
+    background-color: #9C082C;
+}
+
+/*
+Sessão do banner principal
+*/
+
+.banner {
+    height: 500px;
+    background-color: pink;
+    max-width: 100%;
+    padding-top: 5%;
+    padding-left: 25.5%;
+
+}
+
+.banner h1 {
+    font-size: 50px;
+}
+
+/*
+Cards com os destaques
+*/
+
+.destaques {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100%;
+    
+}
+
+.destaques hr {
+    color: pink;
+    width: 100%;
+}
+
+.destaques-texto {
+    margin-top: 0;
+    display: inherit;
+    flex-direction: column;
+    gap: 2rem;
+    width: 25rem;
+}
+
+.destaques-texto button {
+    width: 30%;
+}
+
+.destaques-texto h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.frame {
+    display: inherit;
+    justify-content: center;
+    padding: 0rem 0rem;
+}
+
+.card1 {
+    column-gap: 7%;
+    margin-bottom: 5%;
+}
+
+.card2 {
+    column-gap: 7%;
+    text-align: right;
+}
+
+.card2 .destaques-texto button {
+    align-self: flex-end;
+}
+
+
+/*
+Sessão com faixa
+*/
+
 .faixa {
     padding: 5%;
     background-color: #818181;
@@ -197,7 +220,6 @@ li.dropdown {
 .faixa-text p {
     position: relative;
     bottom: 45px;
-    padding-left: 15%;
 }
 
 .faixa-text h2 {
@@ -210,26 +232,10 @@ li.dropdown {
     padding-left: 15%;
 }
 
-.flex-size {
-    flex-grow: 1;
-    flex-shrink: 1;
-}
 
-.frame {
-    display: inherit;
-    justify-content: center;
-    padding: 0rem 0rem;
-}
-
-.imgsize {
-    max-width: 30%;
-    height: auto;
-}
-
-.nav-logo {
-    width: 8rem;
-    align-self: center;
-}
+/* 
+Rodapé
+*/
 
 .rodape {
     display: flex;
@@ -239,4 +245,28 @@ li.dropdown {
     justify-content: center;
 }
 
+ul {
+    padding-left: 0;
+    padding-top: 30px;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    flex-shrink: 1;
+}
+
+/*
+Tamanhos
+*/
+
+.flex-size {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.imgsize {
+    max-width: 30%;
+    height: auto;
+}
 
