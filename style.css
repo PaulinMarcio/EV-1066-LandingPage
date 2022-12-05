@@ -12,8 +12,8 @@ Barra de navegação
 nav {
     height: 4rem;
     display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
     background-color: #c4c4c4;
     position: fixed;
     width: 100%;
@@ -25,7 +25,6 @@ nav a {
     text-decoration: none;
     color: white;
     flex-shrink: 1;
-    padding-top: 20px;
 }
 
 nav a:visited,
@@ -48,7 +47,6 @@ li a:active {
 
 nav button {
     height: 10px;
-    margin-top: 20px;
     padding: 0px 10px 20px 10px;
     background-color: black;
 }
@@ -132,11 +130,12 @@ Sessão do banner principal
 */
 
 .banner {
+    display: flex;
     height: 500px;
     background-color: pink;
     max-width: 100%;
     padding-top: 5%;
-    padding-left: 25.5%;
+    justify-content: center;
 
 }
 
@@ -181,6 +180,7 @@ Cards com os destaques
 
 .frame {
     display: inherit;
+    align-items: center;
     justify-content: center;
     padding: 0rem 0rem;
 }
@@ -205,31 +205,29 @@ Sessão com faixa
 */
 
 .faixa {
-    padding: 5%;
+    display: flex;
+    padding: 5% 0;
     background-color: #818181;
     color: white;
-    position: relative;
+    justify-content: space-around;
 }
 
 .faixa button {
-    position: absolute;
-    left: 75%;
-    bottom: 35%;
+    align-self: center;
 }
 
-.faixa-text p {
-    position: relative;
-    bottom: 45px;
+.faixa-text p{
+    margin-top: 0;
 }
 
 .faixa-text h2 {
     font-size: 45px;
-
+    margin: 0;
 }
 
 .faixa-text p,
 .faixa-text h2 {
-    padding-left: 15%;
+    width: 100%;
 }
 
 
@@ -241,7 +239,7 @@ Rodapé
     display: flex;
     background-color: #444444;
     color: white;
-    column-gap: 10rem;
+    column-gap: 5%;
     justify-content: center;
 }
 
@@ -266,7 +264,11 @@ Tamanhos
 }
 
 .imgsize {
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
 }
 
+@media only screen and (max-width: 960px){
+
+    
+}
