@@ -11,7 +11,7 @@ Barra de navegação
 
 
 nav {
-    height: 6,5%;
+    height: 6, 5%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,6 +20,7 @@ nav {
     width: 100%;
     z-index: 2;
 }
+
 nav a {
     min-height: 10px;
     background-color: #c4c4c4;
@@ -67,7 +68,8 @@ button {
     align-self: center;
 }
 
-nav a.icon, nav a.mob{
+nav a.icon,
+nav a.mob {
     display: none;
 }
 
@@ -122,7 +124,7 @@ button {
     background-color: #e02b57;
 }
 
-button:hover{
+button:hover {
     background-color: #C7123E;
     color: white;
 }
@@ -159,7 +161,7 @@ Cards com os destaques
     display: flex;
     flex-direction: column;
     row-gap: 100%;
-    
+
 }
 
 .destaques hr {
@@ -222,7 +224,7 @@ Sessão com faixa
     align-self: center;
 }
 
-.faixa-text p{
+.faixa-text p {
     margin-top: 0;
 }
 
@@ -274,27 +276,32 @@ Tamanhos
     height: auto;
 }
 
-@media all and (max-width: 700px) {  
-    
-    nav{
+@media all and (max-width: 700px) {
+
+    nav {
         position: static;
         flex-wrap: wrap;
     }
-    nav a:not(:first-child), nav div.dropdown{
+
+    nav a:not(:first-child),
+    nav div.dropdown {
         display: none;
     }
+
     nav a.icon {
-    float: right;
-    display: block;
+        float: right;
+        display: block;
     }
-    
+
     nav.responsive {
         position: relative;
         flex-direction: column;
         align-items: center;
 
     }
-    nav.responsive a, nav.responsive a.mob{
+
+    nav.responsive a,
+    nav.responsive a.mob {
         display: block;
         float: none;
         text-align: left;
@@ -306,30 +313,56 @@ Tamanhos
         height: 400px;
         justify-content: center;
     }
-    .banner h1{
+
+    .banner h1 {
         font-size: 35px;
     }
-    .destaques-texto button, .card2 .destaques-texto button{
+
+    .destaques-texto button,
+    .card2 .destaques-texto button {
         align-self: center;
     }
-    .destaques .frame{
+
+    .destaques .frame {
         flex-direction: column;
     }
 
-    .frame img{
+    .frame img {
         display: none;
     }
-    .card1, .card2{
+
+    .card1,
+    .card2 {
         text-align: center;
     }
 
-    .faixa{
+    .faixa {
         flex-direction: column;
         align-items: center;
     }
 
-    footer .rodape{
+    footer .rodape {
         flex-wrap: wrap;
         flex-basis: 50%;
+        font-size: small;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .faixa-text {
+        text-align: center;
+        font-size: smaller;
+    }
+
+    .faixa-text h2 {
+        font-size: 35px;
+    }
+
+    .column ul {
+        padding-top: 10px;
+    }
+
+    .rodape h2 {
+        font-size: 15px;
     }
 }
