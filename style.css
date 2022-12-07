@@ -9,11 +9,12 @@ body {
 Barra de navegação
 */
 
+
 nav {
-    height: 4rem;
+    height: 6,5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: #c4c4c4;
     position: fixed;
     width: 100%;
@@ -28,19 +29,19 @@ nav a {
 }
 
 nav a:visited,
-li a {
+div a {
     text-decoration: none;
     color: white;
 }
 
 nav a:hover,
-li a:hover {
+div a:hover {
     color: #aaaaaa;
     text-decoration: none;
 }
 
 nav a:active,
-li a:active {
+div a:active {
     color: #818181;
     text-decoration: none;
 }
@@ -62,7 +63,12 @@ button {
 
 .nav-logo {
     width: 8rem;
+    height: auto;
     align-self: center;
+}
+
+nav a.icon, nav a.mob{
+    display: none;
 }
 
 /*
@@ -77,7 +83,7 @@ Menu com dropdown
     text-decoration: none;
 }
 
-li.dropdown {
+div.dropdown {
     display: inline-block;
 }
 
@@ -116,7 +122,7 @@ button {
     background-color: #e02b57;
 }
 
-button:hover, .dropdown:hover .dropbtn {
+button:hover{
     background-color: #C7123E;
     color: white;
 }
@@ -135,7 +141,7 @@ Sessão do banner principal
     background-color: pink;
     max-width: 100%;
     padding-top: 5%;
-    justify-content: center;
+    padding-left: 25%;
 
 }
 
@@ -268,7 +274,62 @@ Tamanhos
     height: auto;
 }
 
-@media only screen and (max-width: 960px){
-
+@media all and (max-width: 700px) {  
     
+    nav{
+        position: static;
+        flex-wrap: wrap;
+    }
+    nav a:not(:first-child), nav div.dropdown{
+        display: none;
+    }
+    nav a.icon {
+    float: right;
+    display: block;
+    }
+    
+    nav.responsive {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    nav.responsive a, nav.responsive a.mob{
+        display: block;
+        float: none;
+        text-align: left;
+    }
+
+    .banner {
+        padding-left: 0%;
+        padding-top: 0;
+        height: 40vh;
+        justify-content: center;
+    }
+    .banner h1{
+        font-size: 35px;
+    }
+    .destaques-texto button, .card2 .destaques-texto button{
+        align-self: center;
+    }
+    .destaques .frame{
+        flex-direction: column;
+    }
+
+    .frame img{
+        display: none;
+    }
+    .card1, .card2{
+        text-align: center;
+    }
+
+    .faixa{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .rodape{
+        flex-wrap: wrap;
+        flex-basis: 50%;
+    }
 }

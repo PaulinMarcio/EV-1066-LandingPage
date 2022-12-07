@@ -10,24 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav>
+    <script src="content.js"></script>
+    <nav class="navbar" id="topnav">
         <!-- Menu de navegação -->
         <img class="nav-logo" src="media/warren.png" alt="Warren Logo" />
         <a href="#">Investir</a>
-        <li class="dropdown">
+        <div class="dropdown">
             <a class="dropbtn" href="#">Sobre</a>
             <div class="dropdown-content">
                 <a href="#">Aprender</a>
                 <a href="#">Magazine</a>
             </div>
-        </li>
+        </div>
+        <a href="#" class="mob">Sobre</a>
         <a href="#">Quanto custa?</a>
         <a href="#">Aprender</a>
         <a href="#">Magazine</a>
         <button>Abra sua conta</button>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
 
     <section class="banner">
